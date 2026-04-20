@@ -2,8 +2,8 @@ import { Github, Linkedin, Mail } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="py-24 md:py-32">
-      <div className="max-w-2xl">
+    <section className="py-24 md:py-32 text-center">
+      <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
           Nyah Mukassa
         </h1>
@@ -14,7 +14,7 @@ export function Hero() {
           I build clean, user-focused web applications. Currently seeking new 
           opportunities to create impactful digital experiences.
         </p>
-        <div className="mt-8 flex items-center gap-5">
+        <div className="mt-8 flex items-center justify-center gap-5">
           <a
             href="https://github.com"
             target="_blank"

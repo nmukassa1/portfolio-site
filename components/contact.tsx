@@ -23,9 +23,9 @@ export function Contact() {
 
   if (isSubmitted) {
     return (
-      <section className="py-16 border-t border-border">
+      <section className="py-16 border-t border-border text-center">
         <h2 className="text-2xl font-bold text-foreground mb-8">Get in Touch</h2>
-        <div className="max-w-md p-6 bg-secondary rounded-lg">
+        <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg">
           <p className="text-foreground font-medium">Thanks for reaching out!</p>
           <p className="mt-2 text-muted-foreground">
             I&apos;ll get back to you as soon as possible.
@@ -36,9 +36,9 @@ export function Contact() {
   }
 
   return (
-    <section className="py-16 border-t border-border">
+    <section className="py-16 border-t border-border text-center">
       <h2 className="text-2xl font-bold text-foreground mb-8">Get in Touch</h2>
-      <form onSubmit={handleSubmit} className="max-w-md flex flex-col gap-5">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col gap-5 text-left">
         <Field>
           <FieldLabel htmlFor="name">Name</FieldLabel>
           <Input

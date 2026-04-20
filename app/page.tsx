@@ -8,7 +8,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <Contact />
-      <footer className="py-8 border-t border-border">
+      <footer className="py-8 border-t border-border text-center">
         <p className="text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} Nyah Mukassa. All rights reserved.
         </p>

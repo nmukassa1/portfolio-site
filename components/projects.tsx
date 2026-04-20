@@ -26,7 +26,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <section className="py-16">
+    <section className="py-16 text-center">
       <h2 className="text-2xl font-bold text-foreground mb-8">Projects</h2>
       <div className="flex flex-col gap-4">
         {projects.map((project) => (
