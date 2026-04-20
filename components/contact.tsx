@@ -4,31 +4,40 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Field, FieldLabel } from "@/components/ui/field"
+import { Send, CheckCircle } from "lucide-react"
 
 export function Contact() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setIsSubmitting(true)
-    
+    setIsLoading(true)
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
+    setIsLoading(false)
     setIsSubmitted(true)
   }
 
   if (isSubmitted) {
     return (
-      <section className="py-16 border-t border-border text-center">
-        <h2 className="text-2xl font-bold text-foreground mb-8">Get in Touch</h2>
-        <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg">
-          <p className="text-foreground font-medium">Thanks for reaching out!</p>
-          <p className="mt-2 text-muted-foreground">
-            I&apos;ll get back to you as soon as possible.
+      <section
+        id="contact"
+        className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+        aria-label="Contact"
+      >
+        <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-foreground lg:sr-only">
+            Contact
+          </h2>
+        </div>
+        <div className="rounded-md bg-secondary/50 p-6">
+          <div className="flex items-center gap-3 text-primary">
+            <CheckCircle className="h-5 w-5" />
+            <p className="font-medium">Message sent successfully!</p>
+          </div>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Thanks for reaching out. {"I'll"} get back to you as soon as possible.
           </p>
         </div>
       </section>
@@ -36,41 +45,59 @@ export function Contact() {
   }
 
   return (
-    <section className="py-16 border-t border-border text-center">
-      <h2 className="text-2xl font-bold text-foreground mb-8">Get in Touch</h2>
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col gap-5 text-left">
-        <Field>
-          <FieldLabel htmlFor="name">Name</FieldLabel>
+    <section
+      id="contact"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      aria-label="Contact"
+    >
+      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground lg:sr-only">
+          Contact
+        </h2>
+      </div>
+      <div className="text-muted-foreground mb-8">
+        <p>
+          {"I'm"} currently looking for new opportunities. Whether you have a question, 
+          a project idea, or just want to say hi, {"I'd"} love to hear from you.
+        </p>
+      </div>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <div className="grid gap-4 sm:grid-cols-2">
           <Input
-            id="name"
-            name="name"
             type="text"
+            name="name"
+            placeholder="Name"
             required
-            placeholder="Your name"
+            className="bg-secondary/50 border-0 placeholder:text-muted-foreground/60 focus-visible:ring-primary"
           />
-        </Field>
-        <Field>
-          <FieldLabel htmlFor="email">Email</FieldLabel>
           <Input
-            id="email"
-            name="email"
             type="email"
+            name="email"
+            placeholder="Email"
             required
-            placeholder="you@example.com"
+            className="bg-secondary/50 border-0 placeholder:text-muted-foreground/60 focus-visible:ring-primary"
           />
-        </Field>
-        <Field>
-          <FieldLabel htmlFor="message">Message</FieldLabel>
-          <Textarea
-            id="message"
-            name="message"
-            required
-            placeholder="Your message..."
-            rows={5}
-          />
-        </Field>
-        <Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto">
-          {isSubmitting ? "Sending..." : "Send Message"}
+        </div>
+        <Textarea
+          name="message"
+          placeholder="Your message..."
+          rows={4}
+          required
+          className="bg-secondary/50 border-0 placeholder:text-muted-foreground/60 focus-visible:ring-primary resize-none"
+        />
+        <Button
+          type="submit"
+          disabled={isLoading}
+          className="w-fit bg-primary text-primary-foreground hover:bg-primary/90"
+        >
+          {isLoading ? (
+            "Sending..."
+          ) : (
+            <>
+              Send Message
+              <Send className="ml-2 h-4 w-4" />
+            </>
+          )}
         </Button>
       </form>
     </section>
