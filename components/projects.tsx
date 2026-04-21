@@ -1,41 +1,50 @@
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react";
 
 const projects = [
-  {
-    title: "DupeCleaner",
-    description:
-      "A duplicate file removal tool that helps users identify and clean up redundant files, improving storage efficiency and organization.",
-    url: "https://duplicate-file-cleaner.vercel.app/",
-    tags: ["React", "Next.js", "File API"],
-  },
   {
     title: "Movie Gather",
     description:
       "A movie directory app for discovering and exploring films. Browse through a curated collection of movies with detailed information and ratings.",
     url: "https://find-new-movies.vercel.app/",
-    tags: ["React", "Next.js", "API Integration"],
+    tags: ["Next.js", "API Integration", "PostgreSQL", "Auth"],
+  },
+  {
+    title: "DupeCleaner",
+    description:
+      "A duplicate file removal tool that helps users identify and clean up redundant files, improving storage efficiency and organization.",
+    url: "https://duplicate-file-cleaner.vercel.app/",
+    tags: ["Next.js", "File API"],
   },
   {
     title: "Designspo",
     description:
       "A Chrome extension and Next.js dashboard for capturing and managing design inspirations. Save, organize, and revisit design ideas with ease.",
     url: "https://designspo-webpage.vercel.app/",
-    tags: ["Chrome Extension", "Next.js", "Dashboard"],
+    tags: [
+      "Chrome Extension",
+      "React",
+      "Next.js",
+      "ExpressJs",
+      "PostgreSQL",
+      "Auth",
+      "Storage",
+    ],
   },
-]
+];
 
 export function Projects() {
   return (
     <section
       id="projects"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-26 lg:scroll-mt-24"
       aria-label="Selected projects"
     >
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground lg:sr-only">
+      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground">
           Projects
         </h2>
       </div>
+
       <ul className="group/list">
         {projects.map((project) => (
           <li key={project.title} className="mb-12">
@@ -59,7 +68,10 @@ export function Projects() {
                 <p className="mt-2 text-sm leading-normal text-muted-foreground">
                   {project.description}
                 </p>
-                <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
+                <ul
+                  className="mt-2 flex flex-wrap"
+                  aria-label="Technologies used"
+                >
                   {project.tags.map((tag) => (
                     <li key={tag} className="mr-1.5 mt-2">
                       <div className="flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium leading-5 text-primary">
@@ -74,5 +86,5 @@ export function Projects() {
         ))}
       </ul>
     </section>
-  )
+  );
 }
