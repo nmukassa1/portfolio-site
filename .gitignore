@@ -14,3 +14,6 @@ next.user-config.*
 node_modules
 .next/
 .DS_Store
+
+# pnpm content store (never commit; can exceed GitHub file limits)
+.pnpm-store/
