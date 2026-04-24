@@ -24,7 +24,7 @@ export function Header() {
           Frontend Engineer
         </h2>
         <p className="mt-4 leading-relaxed text-muted-foreground">
-          I build accessible, pixel-perfect digital experiences for the web.
+          I'm a frontend engineer focused on designing and building performant, scalable client-side systems—not just user interfaces.
         </p>
 
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
