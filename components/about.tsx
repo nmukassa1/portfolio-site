@@ -13,21 +13,13 @@ export function About() {
 
       <div className="text-muted-foreground">
         <p className="mb-4">
-          I’m a self-taught frontend engineer focused on building fast,
-          polished, and maintainable web applications. I enjoy creating reusable
-          UI components, improving performance, and developing clean, scalable
-          frontend architecture.
+          I’m a self-taught frontend engineer focused on designing and building performant, scalable client-side systems—not just user interfaces. I approach frontend development as a discipline of balancing user experience, performance, and long-term maintainability.
         </p>
         <p className="mb-4">
-          I primarily work with React, Next.js, and TypeScript, and have built
-          projects ranging from full-stack applications to UI-focused products.
-          I’m particularly interested in crafting intuitive user experiences and
-          writing code that’s easy to extend and maintain.
+         I work primarily with React, Next.js, and TypeScript, and have built projects ranging from full-stack applications to component-driven UI systems. My focus goes beyond implementation—I think in terms of rendering strategies, data flow, state management, and performance tradeoffs to ensure applications remain fast and maintainable as they scale.
         </p>
         <p>
-          I’m currently looking for a frontend engineering role where I can
-          contribute to real products, collaborate with experienced engineers,
-          and continue developing my technical skills.
+          I’m currently looking for a frontend engineering role where I can contribute to production systems, collaborate on technical decisions, and continue developing as an engineer who builds not just features, but resilient and scalable products.
         </p>
       </div>
     </section>
