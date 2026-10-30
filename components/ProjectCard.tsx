@@ -6,20 +6,21 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/case-study/${project.title}`}
-      aria-label={project.title}
-      className="block h-[50vh] w-full shrink-0 rounded-lg bg-gray-600 p-6 shadow-md md:w-[calc(50%-0.5rem)]"
+      className="block w-full shrink-0 snap-start md:w-[calc(50%-0.5rem)]"
     >
-      <div className="relative h-full w-full">
+      <div className="relative aspect-[2940/1450] overflow-hidden rounded-xl border border-neutral-200 bg-white">
         {project.image && (
           <Image
             src={project.image}
-            alt={project.title}
+            alt=""
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-contain"
           />
         )}
       </div>
+      <p className="mt-3 text-sm font-medium">{project.title}</p>
+      <p className="mt-1 text-sm text-neutral-500">{project.description}</p>
     </Link>
   );
 }
