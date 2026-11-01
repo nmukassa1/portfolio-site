@@ -1,7 +1,7 @@
 import Link from "next/link";
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-6 py-5 md:px-10">
+    <nav className="fixed inset-x-0 top-0 z-20 flex h-16 items-center justify-between bg-[#F2F0EF] px-6 md:px-10">
       <Link href="/" className="text-sm font-medium tracking-wide">
         NY
       </Link>

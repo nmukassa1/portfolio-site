@@ -3,6 +3,20 @@
 html {
   color-scheme: light;
   background: #f2f0ef;
+  scrollbar-gutter: stable;
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .home-stage {
+    height: auto;
+    overflow: visible;
+  }
+
+  .project-track {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
 }
 
 body {

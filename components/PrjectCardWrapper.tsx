@@ -1,3 +1,4 @@
+import type { RefObject } from "react";
 import ProjectCard from "./ProjectCard";
 
 const projects = [
@@ -21,13 +22,20 @@ const projects = [
   },
 ];
 
-function ProjectCardWrapper() {
+function ProjectCardWrapper({
+  trackRef,
+}: {
+  trackRef: RefObject<HTMLDivElement | null>;
+}) {
   return (
     <section aria-label="Projects" className="pb-6 md:pb-8">
       <h2 className="px-6 text-xs font-medium tracking-[0.16em] text-neutral-500 uppercase md:px-10">
         Projects
       </h2>
-      <div className="project-scroller mt-4 flex flex-col gap-4 px-6 md:snap-x md:snap-mandatory md:flex-row md:overflow-x-auto md:overflow-y-hidden md:scroll-ps-10 md:px-10">
+      <div
+        ref={trackRef}
+        className="project-track project-scroller mt-4 flex w-full flex-col gap-4 px-6 md:w-max md:flex-row md:px-10"
+      >
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
