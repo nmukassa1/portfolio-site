@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "Designspo",
     description: "A library for saved design references.",
-    image: "/designspo-img.png",
+    image: "/designspo-laptop-2.png",
   },
   {
     id: 2,
