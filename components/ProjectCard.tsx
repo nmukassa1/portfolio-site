@@ -6,10 +6,10 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/case-study/${project.title}`}
-      className="block w-full shrink-0 snap-start md:w-[calc(50%-0.5rem)]"
+      className="block w-full shrink-0 md:w-[calc(50%-0.5rem)] md:snap-start"
     >
-      <div className="relative aspect-[2940/1450] overflow-hidden rounded-xl border border-neutral-200 bg-white">
-        {project.image && (
+      <div className="overflow-hidden rounded-xl bg-[#e0e0e0] p-4 md:p-6">
+        <div className="relative aspect-[2940/1450] overflow-hidden rounded-xl">
           <Image
             src={project.image}
             alt=""
@@ -17,7 +17,7 @@ function ProjectCard({ project }: { project: Project }) {
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-contain"
           />
-        )}
+        </div>
       </div>
       <p className="mt-3 text-sm font-medium">{project.title}</p>
       <p className="mt-1 text-sm text-neutral-500">{project.description}</p>

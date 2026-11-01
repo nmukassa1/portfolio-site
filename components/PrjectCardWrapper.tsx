@@ -27,7 +27,7 @@ function ProjectCardWrapper() {
       <h2 className="px-6 text-xs font-medium tracking-[0.16em] text-neutral-500 uppercase md:px-10">
         Projects
       </h2>
-      <div className="project-scroller mt-4 flex snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-hidden px-6 md:px-10">
+      <div className="project-scroller mt-4 flex flex-col gap-4 px-6 md:snap-x md:snap-mandatory md:flex-row md:overflow-x-auto md:overflow-y-hidden md:scroll-ps-10 md:px-10">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
