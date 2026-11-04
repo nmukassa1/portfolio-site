@@ -39,22 +39,5 @@ export const projects: Project[] = [
       mobile: "/movie-mobile.jpg",
     },
   },
-  {
-    id: 3,
-    title: "Designspo",
-    description: "A library for saved design references.",
-    bio: "Designspo is a library to capture and store all your design inspirations. What started as a frustration of saving UI Design inspirations across various sources like Dribbble, Awwwards, Pinterest etc, I wanted one where I can easily store all of them in one central location. That is when I decided to create a chrome extension where you can take a screenshot of any website you like and store the image and URL on a visual dashboard. Making it easier to come back to your design inspirations.",
-    url: "https://designspo-webpage.vercel.app",
-    tools: [
-      "Nextjs",
-      "Chrome Extension API",
-      "ExpressJs",
-      "Supabase Database",
-      "Supabase Auth",
-    ],
-    image: {
-      laptop: "/designspo-laptop.png",
-      mobile: "/designspo-mobile.png",
-    },
-  },
+  
 ];
