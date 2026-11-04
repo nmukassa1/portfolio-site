@@ -55,7 +55,8 @@ export default function HomeStage() {
 
         state.revert = () => mm.revert();
       } catch (error) {
-        pin.dataset.gsap = error instanceof Error ? error.message : String(error);
+        pin.dataset.gsap =
+          error instanceof Error ? error.message : String(error);
       }
     })();
 
@@ -70,10 +71,12 @@ export default function HomeStage() {
       ref={pinRef}
       className="home-stage flex min-h-[calc(100dvh-4rem)] flex-col md:h-[calc(100dvh-4rem)] md:overflow-hidden"
     >
-      <section className="flex flex-1 items-center px-6 md:px-10">
-        <h1 className="max-w-lg text-3xl font-medium leading-tight tracking-tight md:text-4xl">
-          I design and build digital products.
+      {/* <section className="flex flex-end flex-col flex-1 items-center px-6 md:px-10"> */}
+      <section className="w-fit mx-auto mt-20 text-center">
+        <h1 className="max-w-lg text-2xl md:text-4xl font-medium leading-tight tracking-tight ">
+          Fullstack Engineer
         </h1>
+        <p>Building tools to make things a little easier</p>
       </section>
       <ProjectCardWrapper trackRef={trackRef} />
     </div>
