@@ -12,9 +12,12 @@ function Navbar() {
       >
         LinkedIn
       </Link>
-      <Link href="/contact" className="text-lg font-medium tracking-wide">
+      <a
+        href="mailto:nmukassa1@gmail.com"
+        className="text-lg font-medium tracking-wide"
+      >
         Contact
-      </Link>
+      </a>
     </nav>
   );
 }
